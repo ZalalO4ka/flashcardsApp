@@ -1,0 +1,412 @@
+{
+  "Мария" : {
+    "name" : "Мария",
+    "decks" : {
+      "Животные" : {
+        "name" : "Животные",
+        "coverImagePath" : null,
+        "cards" : [ {
+          "id" : "f477f41b-5a10-450c-b010-1ada3a7f377b",
+          "term" : "Elephant",
+          "definition" : "Слон",
+          "imagePath" : null
+        }, {
+          "id" : "561f50ec-f971-4e2d-9fce-f286250ba0bb",
+          "term" : "Tiger",
+          "definition" : "Тигр",
+          "imagePath" : null
+        }, {
+          "id" : "68f47f15-1f34-416b-9d0f-5e8d13701bb9",
+          "term" : "Lion",
+          "definition" : "Лев",
+          "imagePath" : null
+        }, {
+          "id" : "9532937e-4581-459e-aeda-293d5033adba",
+          "term" : "Bear",
+          "definition" : "Медведь",
+          "imagePath" : null
+        }, {
+          "id" : "2d05d123-d612-4e7b-9bcd-0431ed13ab07",
+          "term" : "Wolf",
+          "definition" : "Волк",
+          "imagePath" : null
+        }, {
+          "id" : "3cf68867-9920-452a-8f0a-5c2458544f9f",
+          "term" : "Fox",
+          "definition" : "Лиса",
+          "imagePath" : null
+        }, {
+          "id" : "be13677d-0eae-4eca-b964-2be5121b0feb",
+          "term" : "Rabbit",
+          "definition" : "Кролик",
+          "imagePath" : null
+        }, {
+          "id" : "fee49605-4461-4800-927b-8158426ab92f",
+          "term" : "Horse",
+          "definition" : "Лошадь",
+          "imagePath" : null
+        }, {
+          "id" : "e5e77650-580a-4cbf-8b8a-7a010d7e651d",
+          "term" : "Cow",
+          "definition" : "Корова",
+          "imagePath" : null
+        }, {
+          "id" : "828ad77d-ae63-44b1-9bda-8079cee02ec0",
+          "term" : "Pig",
+          "definition" : "Свинья",
+          "imagePath" : null
+        }, {
+          "id" : "8eb11990-34a6-48dd-8411-a691b823f6c9",
+          "term" : "Sheep",
+          "definition" : "Овца",
+          "imagePath" : null
+        }, {
+          "id" : "39405124-3d26-4395-a68e-2fec141287c8",
+          "term" : "Goat",
+          "definition" : "Коза",
+          "imagePath" : null
+        }, {
+          "id" : "e44b9872-4d49-4e2d-9d20-b73eb7dd1bbb",
+          "term" : "Monkey",
+          "definition" : "Обезьяна",
+          "imagePath" : null
+        }, {
+          "id" : "cadcceac-e0d6-400f-88a3-2133c83741bf",
+          "term" : "Giraffe",
+          "definition" : "Жираф",
+          "imagePath" : null
+        }, {
+          "id" : "a845c7ce-e65f-4c3b-9cf0-bf5e1b736792",
+          "term" : "Zebra",
+          "definition" : "Зебра",
+          "imagePath" : null
+        }, {
+          "id" : "99d9cd40-bc4a-4958-b2ce-e8555f763af2",
+          "term" : "Kangaroo",
+          "definition" : "Кенгуру",
+          "imagePath" : null
+        }, {
+          "id" : "f9037a24-7f5a-4cc3-9c54-8d80f41214d2",
+          "term" : "Dolphin",
+          "definition" : "Дельфин",
+          "imagePath" : null
+        }, {
+          "id" : "b88c2413-f8bf-4124-b9c8-987231994782",
+          "term" : "Shark",
+          "definition" : "Акула",
+          "imagePath" : null
+        }, {
+          "id" : "0fc60722-b22c-4489-9d8c-d85128c344da",
+          "term" : "Whale",
+          "definition" : "Кит",
+          "imagePath" : null
+        }, {
+          "id" : "7958c0ee-da79-4326-adad-669ee8d4626c",
+          "term" : "Eagle",
+          "definition" : "Орел",
+          "imagePath" : null
+        }, {
+          "id" : "cb949806-3202-4446-a409-64963cc56d02",
+          "term" : "Owl",
+          "definition" : "Сова",
+          "imagePath" : null
+        }, {
+          "id" : "39af4122-60b1-491d-a424-0c6c3b092232",
+          "term" : "Penguin",
+          "definition" : "Пингвин",
+          "imagePath" : null
+        } ],
+        "empty" : false,
+        "currentCard" : {
+          "id" : "f477f41b-5a10-450c-b010-1ada3a7f377b",
+          "term" : "Elephant",
+          "definition" : "Слон",
+          "imagePath" : null
+        }
+      },
+      "Фрукты" : {
+        "name" : "Фрукты",
+        "coverImagePath" : null,
+        "cards" : [ {
+          "id" : "3274eb4c-06f5-40ec-b6e9-cbf5b15ed251",
+          "term" : "Pear",
+          "definition" : "Груша",
+          "imagePath" : null
+        }, {
+          "id" : "4e355676-79c6-4324-873d-b068793b49a6",
+          "term" : "Melon",
+          "definition" : "Дыня",
+          "imagePath" : null
+        }, {
+          "id" : "209ff7d9-bf7a-4733-a698-b72aeb1d64dc",
+          "term" : "Watermelon",
+          "definition" : "Арбуз",
+          "imagePath" : null
+        }, {
+          "id" : "a1a9a549-641c-45f6-b877-3dfa7dba4ab7",
+          "term" : "Blueberry",
+          "definition" : "Черника",
+          "imagePath" : null
+        }, {
+          "id" : "042bbf21-d847-45c2-81b7-bb549a389aab",
+          "term" : "Strawberry",
+          "definition" : "Клубника",
+          "imagePath" : null
+        }, {
+          "id" : "42fd8d43-d08f-41e7-8216-99af14d3977b",
+          "term" : "Pomegranate",
+          "definition" : "Гранат",
+          "imagePath" : null
+        }, {
+          "id" : "3bbf7395-1f51-4556-98cd-ee69c62cdc09",
+          "term" : "Orange",
+          "definition" : "Апельсин",
+          "imagePath" : null
+        }, {
+          "id" : "ae0e7ae7-a480-4cc0-94f1-154633b42dc3",
+          "term" : "Pineapple",
+          "definition" : "Ананас",
+          "imagePath" : null
+        }, {
+          "id" : "44a0e51e-5118-4150-a9a6-7df989c483ef",
+          "term" : "Lemon",
+          "definition" : "Лимон",
+          "imagePath" : null
+        }, {
+          "id" : "a93d742b-819b-4678-893e-d628b2732450",
+          "term" : "Lime",
+          "definition" : "Лайм",
+          "imagePath" : null
+        }, {
+          "id" : "92c37937-1374-4612-8e9c-5d57ffc14752",
+          "term" : "Papaya",
+          "definition" : "Папайя",
+          "imagePath" : null
+        }, {
+          "id" : "c9a8f2c4-73be-4ea1-8efd-ba9a1371efbe",
+          "term" : "﻿Apple",
+          "definition" : "Яблоко",
+          "imagePath" : null
+        }, {
+          "id" : "4af01b1a-b8a7-4dab-ae38-5cc581617a59",
+          "term" : "Coconut",
+          "definition" : "Кокос",
+          "imagePath" : null
+        }, {
+          "id" : "6b4c8330-7545-4dad-834e-7613d698101d",
+          "term" : "Kiwi",
+          "definition" : "Киви",
+          "imagePath" : null
+        }, {
+          "id" : "84a436ad-2e2e-4555-8f84-c3d5c9356e1e",
+          "term" : "Banana",
+          "definition" : "Банан",
+          "imagePath" : null
+        }, {
+          "id" : "ede43617-9556-431b-a6a0-56a3617a4367",
+          "term" : "Grapefruit",
+          "definition" : "Грейпфрут",
+          "imagePath" : null
+        }, {
+          "id" : "465b7366-29e0-4d82-b1aa-3222fbd1c57c",
+          "term" : "Cherry",
+          "definition" : "Вишня / Черешня",
+          "imagePath" : null
+        }, {
+          "id" : "fb747a76-d140-4a5a-948d-f4e0cd762245",
+          "term" : "Avocado",
+          "definition" : "Авокадо",
+          "imagePath" : null
+        }, {
+          "id" : "d0dbd7db-f034-4320-ac72-d4e9c1bd5bcd",
+          "term" : "Plum",
+          "definition" : "Слива",
+          "imagePath" : null
+        }, {
+          "id" : "636fc709-fd7c-4c57-8a7d-7e48d37727be",
+          "term" : "Raspberry",
+          "definition" : "Малина",
+          "imagePath" : null
+        }, {
+          "id" : "13dec62b-0142-4521-9441-00053978f9b3",
+          "term" : "Mango",
+          "definition" : "Манго",
+          "imagePath" : null
+        }, {
+          "id" : "50b8198a-8ecd-4b6f-9e19-c3bf4dd0fb60",
+          "term" : "Fig",
+          "definition" : "Инжир",
+          "imagePath" : null
+        }, {
+          "id" : "ceccb048-7b6e-4fa3-9660-d630562ce4d2",
+          "term" : "Apricot",
+          "definition" : "Абрикос",
+          "imagePath" : null
+        }, {
+          "id" : "1e821783-e857-4997-9a64-5ff195b6b53d",
+          "term" : "Peach",
+          "definition" : "Персик",
+          "imagePath" : null
+        }, {
+          "id" : "f36d87a7-eb62-4044-a6db-4f132b83dfee",
+          "term" : "Grape",
+          "definition" : "Виноград",
+          "imagePath" : null
+        } ],
+        "empty" : false,
+        "currentCard" : {
+          "id" : "3274eb4c-06f5-40ec-b6e9-cbf5b15ed251",
+          "term" : "Pear",
+          "definition" : "Груша",
+          "imagePath" : null
+        }
+      }
+    }
+  },
+  "Алексей" : {
+    "name" : "Алексей",
+    "decks" : {
+      "Фрукты" : {
+        "name" : "Фрукты",
+        "coverImagePath" : null,
+        "cards" : [ {
+          "id" : "85e6c3ba-882d-4e7e-a652-d7cba42cc93e",
+          "term" : "Pear",
+          "definition" : "Груша",
+          "imagePath" : null
+        }, {
+          "id" : "bdcc1cb9-d8e7-4b01-98ac-3def5726bb1f",
+          "term" : "Melon",
+          "definition" : "Дыня",
+          "imagePath" : null
+        }, {
+          "id" : "ce092a46-33e5-4220-880d-58148bd50dc7",
+          "term" : "Watermelon",
+          "definition" : "Арбуз",
+          "imagePath" : null
+        }, {
+          "id" : "df03b725-ee54-4614-8799-7224c146fe31",
+          "term" : "Blueberry",
+          "definition" : "Черника",
+          "imagePath" : null
+        }, {
+          "id" : "ff411588-d9a9-444a-a9a2-7385a311029a",
+          "term" : "Strawberry",
+          "definition" : "Клубника",
+          "imagePath" : null
+        }, {
+          "id" : "f5e564b0-5bcf-4277-a5d9-21594ac8ee69",
+          "term" : "Pomegranate",
+          "definition" : "Гранат",
+          "imagePath" : null
+        }, {
+          "id" : "4fb0352b-78d6-4e06-bcb1-939cf51f1938",
+          "term" : "Orange",
+          "definition" : "Апельсин",
+          "imagePath" : null
+        }, {
+          "id" : "581b4256-a2f9-4949-9a20-e89a71d70cee",
+          "term" : "Pineapple",
+          "definition" : "Ананас",
+          "imagePath" : null
+        }, {
+          "id" : "e32c8352-c9b2-4722-8ba1-3df9995ce106",
+          "term" : "Lemon",
+          "definition" : "Лимон",
+          "imagePath" : null
+        }, {
+          "id" : "5a867cba-aa10-4682-a387-5e38cd77b12f",
+          "term" : "Lime",
+          "definition" : "Лайм",
+          "imagePath" : null
+        }, {
+          "id" : "3ba1f14d-bd00-4a4a-bf0d-1824a48dd8fc",
+          "term" : "Papaya",
+          "definition" : "Папайя",
+          "imagePath" : null
+        }, {
+          "id" : "db87f64f-dd47-4fd6-8c3f-60d116b32c63",
+          "term" : "﻿Apple",
+          "definition" : "Яблоко",
+          "imagePath" : null
+        }, {
+          "id" : "038266b8-22e5-42d9-ac5a-ce1709d4423a",
+          "term" : "Coconut",
+          "definition" : "Кокос",
+          "imagePath" : null
+        }, {
+          "id" : "5fa542c4-c0c4-465d-96ef-692023057040",
+          "term" : "Kiwi",
+          "definition" : "Киви",
+          "imagePath" : null
+        }, {
+          "id" : "69c2574b-f5c4-4e51-a1d0-67507c0ae708",
+          "term" : "Banana",
+          "definition" : "Банан",
+          "imagePath" : null
+        }, {
+          "id" : "ef634bef-1986-434e-9ef5-3cd9781c3c17",
+          "term" : "Grapefruit",
+          "definition" : "Грейпфрут",
+          "imagePath" : null
+        }, {
+          "id" : "6309ecc6-6ba2-48d2-b243-0f724b596267",
+          "term" : "Cherry",
+          "definition" : "Вишня / Черешня",
+          "imagePath" : null
+        }, {
+          "id" : "d2be9d93-ad19-4739-ba74-d3b431b6ed30",
+          "term" : "Avocado",
+          "definition" : "Авокадо",
+          "imagePath" : null
+        }, {
+          "id" : "346e48e6-9587-4586-a469-8ccd54425029",
+          "term" : "Plum",
+          "definition" : "Слива",
+          "imagePath" : null
+        }, {
+          "id" : "a2501083-4db0-49b0-926e-94a7dedfd31e",
+          "term" : "Raspberry",
+          "definition" : "Малина",
+          "imagePath" : null
+        }, {
+          "id" : "d8d196f1-e60a-46d6-a004-2aebf4fb0dc8",
+          "term" : "Mango",
+          "definition" : "Манго",
+          "imagePath" : null
+        }, {
+          "id" : "bb721cbf-70e6-4b17-b974-5dc70c488a69",
+          "term" : "Fig",
+          "definition" : "Инжир",
+          "imagePath" : null
+        }, {
+          "id" : "2ee2dec2-0040-4b5e-9f5c-49766e441601",
+          "term" : "Apricot",
+          "definition" : "Абрикос",
+          "imagePath" : null
+        }, {
+          "id" : "b60ed93b-bcba-4374-b53d-b51bd7b9928f",
+          "term" : "Peach",
+          "definition" : "Персик",
+          "imagePath" : null
+        }, {
+          "id" : "9f33b85f-918b-47de-98a2-b99238f4d438",
+          "term" : "Grape",
+          "definition" : "Виноград",
+          "imagePath" : null
+        } ],
+        "empty" : false,
+        "currentCard" : {
+          "id" : "85e6c3ba-882d-4e7e-a652-d7cba42cc93e",
+          "term" : "Pear",
+          "definition" : "Груша",
+          "imagePath" : null
+        }
+      }
+    }
+  },
+  "Богдан" : {
+    "name" : "Богдан",
+    "decks" : { }
+  }
+}

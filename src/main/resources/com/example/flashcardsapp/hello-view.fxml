@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/fxml/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flashcardsapp.HelloController">
+
+    <!-- Левая панель: Sidebar (20% ширины) -->
+    <left>
+        <VBox fx:id="sidebar" spacing="10.0" style="-fx-background-color: #f4f4f4; -fx-padding: 12; -fx-border-color: #e0e0e0; -fx-border-width: 0 1 0 0;"
+              prefWidth="${rootPane.width * 0.20}" minWidth="${rootPane.width * 0.20}" maxWidth="${rootPane.width * 0.20}">
+            <HBox alignment="CENTER_LEFT" spacing="8.0" style="-fx-padding: 0 0 0 4;">
+                <!-- Добавлен fx:id="sidebarTitle" и убран внутренний тег <font> -->
+                <Label fx:id="sidebarTitle" text="Ученики" HBox.hgrow="ALWAYS" />
+
+                <!-- Добавлен fx:id="studentMenuButton" -->
+                <MenuButton fx:id="studentMenuButton" text="⋮" style="-fx-background-color: transparent; -fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 0 5 0 5;">
+                    <items>
+                        <MenuItem text="+ Добавить ученика" onAction="#onAddStudentClick"/>
+                        <MenuItem text="✎ Переименовать" onAction="#onEditStudentClick"/>
+                        <SeparatorMenuItem />
+                        <MenuItem text="✕ Удалить ученика" onAction="#onDeleteStudentClick"/>
+                    </items>
+                </MenuButton>
+            </HBox>
+
+            <ListView fx:id="studentListView" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </left>
+
+    <!-- Центральная область -->
+    <center>
+        <StackPane fx:id="mainContentArea">
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-padding: 0;">
+                <VBox spacing="15.0" style="-fx-padding: 20;">
+                    <HBox alignment="CENTER_LEFT" spacing="12.0">
+                        <Button text="☰" onAction="#toggleSidebar" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand;" />
+
+                        <Label fx:id="currentStudentTitleLabel" text="Колоды ученика">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Button text="+ Новая колода" onAction="#onAddDeckClick" style="-fx-font-size: 13px;" />
+                        <Button text="📁 Из CSV" onAction="#onImportCsvClick" style="-fx-font-size: 13px;" />
+                        <Button text="Экспорт в CSV" onAction="#onExportCsvClicked" style="-fx-font-size: 13px;" />
+                        <HBox HBox.hgrow="ALWAYS" />
+                        <Button text="⚙ Настройки" onAction="#onOpenSettingsClick" style="-fx-font-size: 13px;" />
+                    </HBox>
+
+                    <FlowPane fx:id="deckGridPane" hgap="20.0" vgap="20.0" />
+                </VBox>
+            </ScrollPane>
+        </StackPane>
+    </center>
+
+</BorderPane>

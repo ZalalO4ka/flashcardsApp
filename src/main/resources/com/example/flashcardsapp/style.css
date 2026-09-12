@@ -1,0 +1,193 @@
+/* Базовые настройки графики для работы 3D-трансформаций */
+.root {
+    -fx-font-family: "System";
+}
+
+/* 1. Всплывающие и диалоговые окна */
+.dialog-pane {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 16, 0, 0, 4);
+}
+
+.dialog-pane > .header-panel {
+    -fx-background-color: #f9fafb;
+    -fx-background-radius: 12px 12px 0 0;
+}
+
+.dialog-pane .content {
+    -fx-padding: 16px;
+}
+
+/* 2. ComboBox и выпадающие списки */
+.combo-box-base,
+.combo-box {
+    -fx-background-color: #f3f4f6;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 8px;
+}
+
+.combo-box-base:hover,
+.combo-box:hover {
+    -fx-background-color: #e5e7eb;
+}
+
+.combo-box-base:focused,
+.combo-box-focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #9ca3af;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0, 4);
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: #1f2937;
+    -fx-padding: 8px 12px;
+    -fx-background-color: transparent;
+}
+/* Убираем яркую синюю заливку при выборе элементов в ChoiceDialog / ComboBox, заменяя на затухание */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.08) !important; /* Более явное затухание/затемнение при наведении */
+    -fx-text-fill: #111827;
+}
+
+.combo-box-popup .list-cell:filled:selected,
+.combo-box-popup .list-cell:filled:selected:hover,
+.choice-box-popup .list-cell:filled:selected,
+.choice-box-popup .list-cell:filled:selected:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.08) !important;
+    -fx-text-fill: #111827;
+}
+
+/* Стилизация списка учеников (ListCell) */
+.list-cell {
+    -fx-padding: 10px 14px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-color: transparent;
+}
+
+.list-cell:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: rgba(0, 0, 0, 0.08);
+    -fx-text-fill: #111827;
+}
+
+/* 3. Выпадающие контекстные меню (ContextMenu) */
+.context-menu {
+    -fx-background-color: transparent;
+    -fx-padding: 0px;
+}
+
+.context-menu > * {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-padding: 0px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.25), 12, 0, 0, 4);
+}
+
+.menu-item {
+    -fx-padding: 10px 20px;
+    -fx-background-color: transparent;
+}
+
+.menu-item .label {
+    -fx-text-fill: #1a1a1a;
+    -fx-font-size: 14px;
+}
+
+/* Убираем синий цвет, делаем более явное затухание при наведении */
+.menu-item:focused,
+.menu-item:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.08);
+}
+
+.menu-item:focused .label,
+.menu-item:hover .label {
+    -fx-text-fill: #1a1a1a;
+}
+
+/* 4. Тёмная тема для выпадающих меню */
+.root.dark .context-menu > * {
+    -fx-background-color: #2d2d2d;
+    -fx-border-color: #404040;
+}
+
+.root.dark .combo-box-popup .list-view {
+    -fx-background-color: #2d2d2d;
+    -fx-border-color: #404040;
+}
+
+.root.dark .combo-box-popup .list-cell {
+    -fx-text-fill: #ffffff;
+}
+
+/* Для тёмной темы во всплывающих списках */
+.root.dark .combo-box-popup .list-cell:filled:selected,
+.root.dark .combo-box-popup .list-cell:filled:selected:hover,
+.root.dark .choice-box-popup .list-cell:filled:selected,
+.root.dark .choice-box-popup .list-cell:filled:selected:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15) !important;
+    -fx-text-fill: #ffffff;
+}
+
+.root.dark .menu-item .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Более явное затухание (светлое на тёмном) при наведении в тёмной теме */
+.root.dark .menu-item:focused,
+.root.dark .menu-item:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+}
+
+.root.dark .menu-item:focused .label,
+.root.dark .menu-item:hover .label {
+    -fx-text-fill: #ffffff;
+}
+/* Делаем троеточие крупным, жирным и темным по умолчанию (для светлой темы) */
+.menu-button, .deck-menu-button {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a1a;
+}
+
+/* Переопределяем цвет внутренней стрелки/символа для MenuButton в светлой теме */
+.menu-button > .arrow-button > .arrow {
+    -fx-background-color: #1a1a1a;
+}
+.menu-button .label {
+    -fx-text-fill: #1a1a1a;
+}
+
+/* Инвертируем цвет значка на белый при включенной темной теме */
+.root.dark .menu-button,
+.root.dark .deck-menu-button {
+    -fx-text-fill: #ffffff;
+}
+
+.root.dark .menu-button > .arrow-button > .arrow {
+    -fx-background-color: #ffffff;
+}
+
+.root.dark .menu-button .label {
+    -fx-text-fill: #ffffff;
+}
