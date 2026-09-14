@@ -99,7 +99,7 @@
                                     <arg value="--name"/>
                                     <arg value="Flashcards"/>
                                     <arg value="--app-version"/>
-                                    <arg value="1.1.0"/>
+                                    <arg value="1.2.0"/>
                                     <arg value="--input"/>
                                     <arg value="target"/>
                                     <arg value="--main-jar"/>
