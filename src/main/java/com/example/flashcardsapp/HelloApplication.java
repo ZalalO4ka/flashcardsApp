@@ -26,16 +26,8 @@ public class HelloApplication extends Application {
         }
 
         stage.setScene(scene);
-
-        // Включаем полноэкранный режим (скрывает рамки и панель задач)
         stage.setFullScreen(true);
-        // Убираем подсказку "Нажмите ESC для выхода из полноэкранного режима"
         stage.setFullScreenExitHint("");
-
         stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch();
     }
 }

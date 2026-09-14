@@ -3,7 +3,7 @@ package com.example.flashcardsapp;
 import java.io.File;
 
 public class PathUtils {
-    private static final String APP_DIR_NAME = "MyFlashcardsApp"; // Название твоей программы
+    private static final String APP_DIR_NAME = "MyFlashcardsApp";
 
     public static File getAppDataDirectory() {
         String userHome = System.getProperty("user.home");
@@ -11,23 +11,16 @@ public class PathUtils {
         File appDir;
 
         if (os.contains("win")) {
-            // Windows: C:\Users\<User>\AppData\Roaming\MyFlashcardsApp
             String appData = System.getenv("APPDATA");
-            if (appData != null) {
-                appDir = new File(appData, APP_DIR_NAME);
-            } else {
-                appDir = new File(userHome, "AppData\\Roaming\\" + APP_DIR_NAME);
-            }
+            appDir = (appData != null) ? new File(appData, APP_DIR_NAME) : new File(userHome, "AppData\\Roaming\\" + APP_DIR_NAME);
         } else if (os.contains("mac")) {
-            // macOS: ~/Library/Application Support/MyFlashcardsApp
             appDir = new File(userHome, "Library/Application Support/" + APP_DIR_NAME);
         } else {
-            // Linux/Unix: ~/.config/MyFlashcardsApp
             appDir = new File(userHome, ".config/" + APP_DIR_NAME);
         }
 
-        if (!appDir.exists()) {
-            appDir.mkdirs(); // Создаем папку, если её ещё нет
+        if (!appDir.exists() && !appDir.mkdirs()) {
+            System.err.println("Не удалось создать директорию приложения: " + appDir.getAbsolutePath());
         }
 
         return appDir;
@@ -39,8 +32,8 @@ public class PathUtils {
 
     public static File getBackupDirectory() {
         File backupDir = new File(getAppDataDirectory(), "backups");
-        if (!backupDir.exists()) {
-            backupDir.mkdirs();
+        if (!backupDir.exists() && !backupDir.mkdirs()) {
+            System.err.println("Не удалось создать директорию бэкапов: " + backupDir.getAbsolutePath());
         }
         return backupDir;
     }

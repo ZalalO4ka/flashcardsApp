@@ -7,7 +7,7 @@
 .dialog-pane {
     -fx-background-color: #ffffff;
     -fx-border-color: #d1d5db;
-    -fx-border-width: 1.5px;
+    -fx-border-width: 2px;
     -fx-border-radius: 16px;
     -fx-background-radius: 16px;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 16, 0, 0, 4);
@@ -55,12 +55,8 @@
     -fx-padding: 8px 12px;
     -fx-background-color: transparent;
 }
-/* Убираем яркую синюю заливку при выборе элементов в ChoiceDialog / ComboBox, заменяя на затухание */
-.combo-box-popup .list-cell:hover {
-    -fx-background-color: rgba(0, 0, 0, 0.08) !important; /* Более явное затухание/затемнение при наведении */
-    -fx-text-fill: #111827;
-}
 
+.combo-box-popup .list-cell:hover,
 .combo-box-popup .list-cell:filled:selected,
 .combo-box-popup .list-cell:filled:selected:hover,
 .choice-box-popup .list-cell:filled:selected,
@@ -73,7 +69,6 @@
 .list-cell {
     -fx-padding: 10px 14px;
     -fx-background-radius: 8px;
-    -fx-cursor: hand;
     -fx-font-weight: bold;
     -fx-font-size: 16px;
     -fx-background-color: transparent;
@@ -88,6 +83,43 @@
     -fx-text-fill: #111827;
 }
 
+/* Поля ввода имени ученика и названия колоды */
+.dialog-pane .text-field {
+    -fx-font-family: "Arial";       /* Ваше семейство шрифта */
+    -fx-font-size: 16px;            /* Размер шрифта */
+    -fx-font-weight: bold;          /* Начертание: bold / normal */
+}
+
+/* Поля ввода для карточек (Термин и Определение) */
+.dialog-pane .text-area {
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+/* Иконки-кнопки (настройки, закрытие) */
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 0 10 0 10;
+}
+
+.icon-button-settings {
+    -fx-font-size: 34px;
+}
+
+.icon-button-exit {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* Цвет текста подстраиваем под системную или пользовательскую тему */
+.icon-button {
+    -fx-text-fill: #000000;
+}
+
+.root.dark .icon-button {
+    -fx-text-fill: #ffffff;
+}
 /* 3. Выпадающие контекстные меню (ContextMenu) */
 .context-menu {
     -fx-background-color: transparent;
@@ -114,7 +146,6 @@
     -fx-font-size: 14px;
 }
 
-/* Убираем синий цвет, делаем более явное затухание при наведении */
 .menu-item:focused,
 .menu-item:hover {
     -fx-background-color: rgba(0, 0, 0, 0.08);
@@ -125,22 +156,40 @@
     -fx-text-fill: #1a1a1a;
 }
 
-/* 4. Тёмная тема для выпадающих меню */
-.root.dark .context-menu > * {
-    -fx-background-color: #2d2d2d;
-    -fx-border-color: #404040;
+/* 4. Кнопка выпадающего меню (MenuButton) и вращение стрелочки */
+.menu-button {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
 }
 
+.menu-button .label {
+    -fx-text-fill: #1a1a1a;
+}
+
+.menu-button .arrow-button .arrow {
+    -fx-background-color: #1a1a1a;
+    -fx-rotate: -90deg; /* Стрелка влево по умолчанию */
+}
+
+.menu-button:showing .arrow-button .arrow {
+    -fx-rotate: 0deg; /* Стрелка вниз при открытии */
+}
+
+/* 5. Тёмная тема */
+.root.dark .context-menu > *,
 .root.dark .combo-box-popup .list-view {
     -fx-background-color: #2d2d2d;
     -fx-border-color: #404040;
 }
 
-.root.dark .combo-box-popup .list-cell {
+.root.dark .combo-box-popup .list-cell,
+.root.dark .menu-item .label,
+.root.dark .menu-button .label {
     -fx-text-fill: #ffffff;
 }
 
-/* Для тёмной темы во всплывающих списках */
 .root.dark .combo-box-popup .list-cell:filled:selected,
 .root.dark .combo-box-popup .list-cell:filled:selected:hover,
 .root.dark .choice-box-popup .list-cell:filled:selected,
@@ -149,11 +198,6 @@
     -fx-text-fill: #ffffff;
 }
 
-.root.dark .menu-item .label {
-    -fx-text-fill: #ffffff;
-}
-
-/* Более явное затухание (светлое на тёмном) при наведении в тёмной теме */
 .root.dark .menu-item:focused,
 .root.dark .menu-item:hover {
     -fx-background-color: rgba(255, 255, 255, 0.12);
@@ -163,31 +207,7 @@
 .root.dark .menu-item:hover .label {
     -fx-text-fill: #ffffff;
 }
-/* Делаем троеточие крупным, жирным и темным по умолчанию (для светлой темы) */
-.menu-button, .deck-menu-button {
-    -fx-font-size: 22px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #1a1a1a;
-}
 
-/* Переопределяем цвет внутренней стрелки/символа для MenuButton в светлой теме */
-.menu-button > .arrow-button > .arrow {
-    -fx-background-color: #1a1a1a;
-}
-.menu-button .label {
-    -fx-text-fill: #1a1a1a;
-}
-
-/* Инвертируем цвет значка на белый при включенной темной теме */
-.root.dark .menu-button,
-.root.dark .deck-menu-button {
-    -fx-text-fill: #ffffff;
-}
-
-.root.dark .menu-button > .arrow-button > .arrow {
+.root.dark .menu-button .arrow-button .arrow {
     -fx-background-color: #ffffff;
-}
-
-.root.dark .menu-button .label {
-    -fx-text-fill: #ffffff;
 }

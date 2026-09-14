@@ -3,7 +3,7 @@ package com.example.flashcardsapp.model;
 import java.util.UUID;
 
 public class Flashcard {
-    private String id; // Убрали final
+    private String id;
     private String term;
     private String definition;
     private String imagePath;
@@ -22,9 +22,14 @@ public class Flashcard {
         this.definition = definition;
         this.imagePath = imagePath;
     }
-
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; } // Добавили сеттер
+    @SuppressWarnings("unused")
+        public String getId () {
+            return id;
+        }
+    @SuppressWarnings("unused")
+        public void setId (String id){
+            this.id = id;
+        }
 
     public String getTerm() { return term; }
     public void setTerm(String term) { this.term = term; }
@@ -33,5 +38,4 @@ public class Flashcard {
     public void setDefinition(String definition) { this.definition = definition; }
 
     public String getImagePath() { return imagePath; }
-    public void setImagePath(String imagePath) { this.imagePath = imagePath; }
 }

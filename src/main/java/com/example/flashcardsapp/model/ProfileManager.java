@@ -19,7 +19,6 @@ public class ProfileManager {
 
     public Student getCurrentStudent() { return currentStudent; }
 
-    // Установка текущего ученика по имени
     public void setCurrentStudent(String name) {
         if (students.containsKey(name)) {
             this.currentStudent = students.get(name);
@@ -27,13 +26,8 @@ public class ProfileManager {
     }
 
     public Deck getCurrentDeck() { return currentDeck; }
+    public void setCurrentDeck(Deck deck) { this.currentDeck = deck; }
 
-    // Установка текущей колоды
-    public void setCurrentDeck(Deck deck) {
-        this.currentDeck = deck;
-    }
-
-    // Добавление ученика
     public boolean addStudent(String name) {
         if (students.containsKey(name)) return false;
         Student student = new Student(name);
@@ -42,45 +36,24 @@ public class ProfileManager {
         return true;
     }
 
-    // Добавление колоды текущему ученику
     public boolean addDeckToCurrentStudent(String deckName) {
-        if (currentStudent == null) return false;
-        if (currentStudent.getDecks().containsKey(deckName)) return false;
-
+        if (currentStudent == null || currentStudent.getDecks().containsKey(deckName)) return false;
         Deck deck = new Deck(deckName);
         currentStudent.getDecks().put(deckName, deck);
         currentDeck = deck;
         return true;
     }
 
-    // Переименование ученика
     public boolean renameStudent(String oldName, String newName) {
         if (students.containsKey(oldName) && !students.containsKey(newName)) {
             Student student = students.remove(oldName);
             student.setName(newName);
             students.put(newName, student);
-            if (currentStudent == student) {
-                currentStudent = student;
-            }
             return true;
         }
         return false;
     }
 
-    // Переименование текущей колоды
-    public boolean renameCurrentDeck(String newName) {
-        if (currentStudent != null && currentDeck != null) {
-            String oldName = currentDeck.getName();
-            if (currentStudent.getDecks().containsKey(oldName) && !currentStudent.getDecks().containsKey(newName)) {
-                Deck deck = currentStudent.getDecks().remove(oldName);
-                deck.setName(newName);
-                currentStudent.getDecks().put(newName, deck);
-                currentDeck = deck;
-                return true;
-            }
-        }
-        return false;
-    }
     public boolean renameDeck(Deck deck, String newName) {
         if (currentStudent != null && deck != null) {
             String oldName = deck.getName();
@@ -94,11 +67,14 @@ public class ProfileManager {
         return false;
     }
 
-    // Удаление ученика
-    public void removeStudent(String name) {
+    public boolean removeStudent(String name) {
+        if (name == null || !students.containsKey(name)) {
+            return false;
+        }
         students.remove(name);
         if (currentStudent != null && currentStudent.getName().equals(name)) {
-            currentStudent = students.isEmpty() ? null : students.values().iterator().next();
+            currentStudent = null;
         }
+        return true;
     }
 }

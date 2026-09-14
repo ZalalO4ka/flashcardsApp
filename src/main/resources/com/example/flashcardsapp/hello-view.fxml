@@ -25,9 +25,9 @@
                 <Label fx:id="sidebarTitle" text="Ученики" HBox.hgrow="ALWAYS" />
 
                 <!-- Добавлен fx:id="studentMenuButton" -->
-                <MenuButton fx:id="studentMenuButton" text="⋮" style="-fx-background-color: transparent; -fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 0 5 0 5;">
+                <MenuButton fx:id="studentMenuButton" text="⋮" style="-fx-background-color: transparent; -fx-font-weight: bold; -fx-padding: 0 5 0 5;">
                     <items>
-                        <MenuItem text="+ Добавить ученика" onAction="#onAddStudentClick"/>
+                        <MenuItem text="➕ Добавить ученика" onAction="#onAddStudentClick"/>
                         <MenuItem text="✎ Переименовать" onAction="#onEditStudentClick"/>
                         <SeparatorMenuItem />
                         <MenuItem text="✕ Удалить ученика" onAction="#onDeleteStudentClick"/>
